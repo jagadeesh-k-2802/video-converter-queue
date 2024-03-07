@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "tsx server.ts",
+    "server:dev": "nodemon --exec tsx server.ts",
+    "consumer:dev": "nodemon --exec tsx consumer.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "formidable": "^3.5.1",
+    "lowdb": "^7.0.1",
+    "morgan": "^1.10.0",
+    "mv": "^2.1.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.5",
+    "@types/express": "^4.17.21",
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@types/formidable": "^3.4.5",
+    "@types/mv": "^2.1.4",
+    "@types/node": "^20.11.24",
+    "@types/uuid": "^9.0.8",
+    "tsx": "^4.7.1"
+  }
+}

@@ -1,0 +1,101 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input,
+button,
+select {
+  display: inline-block;
+  width: 100%;
+  font-family: inherit;
+  border-radius: 0.5rem;
+}
+
+select {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+form {
+  text-align: center;
+  width: 350px;
+}
+
+a {
+  display: inline-block;
+  background-color: #2d59be;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  width: 285px;
+}
+
+button {
+  display: inline-block;
+  background-color: #2d59be;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 300ms;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #1e3f8b;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+progress {
+  background-color: #1e3f8b;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 40px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #1e3f8b;
+  border-radius: 40px;
+}
+
+.file {
+  background-color: #dedede;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.info {
+  text-align: center;
+}
+
+.drop-area {
+  height: 350px;
+  width: 350px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
