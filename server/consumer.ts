@@ -1,7 +1,13 @@
+import dotenv from 'dotenv';
+import colors from 'colors';
 import ffmpeg from 'fluent-ffmpeg';
 import db from './config/db';
 import { getQueueChannel, queue } from './config/queue';
 import { formatMapper } from './utils/functions';
+
+// Config
+colors?.enable();
+dotenv.config({ path: './config/config.env' });
 
 (async () => {
   try {
@@ -25,7 +31,7 @@ import { formatMapper } from './utils/functions';
               (async () => {
                 const database = await db();
                 await database.update(({ jobs }) => (jobs[data.id] = output));
-                console.log(`[+] Converted video ${data.id}`);
+                console.log(`[+] Converted video ${data.id}`.yellow);
               })();
             });
         }
@@ -37,7 +43,7 @@ import { formatMapper } from './utils/functions';
       await channel.close();
     });
 
-    console.log('[*] Waiting for messages. To exit press CTRL+C');
+    console.log('[*] Waiting for messages. To exit press CTRL+C'.green);
   } catch (err) {
     console.warn(err);
   }

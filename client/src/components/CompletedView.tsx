@@ -31,12 +31,12 @@ const CompletedView = ({ onUploadNew }: { onUploadNew: () => void }) => {
         Download Video
       </a>
 
-      <button onClick={onUploadNew}>Upload New</button>
+      <button onClick={onUploadNew}>Upload Another One</button>
     </>
   ) : (
     <>
       <p>Your video is processing...</p>
-      <button onClick={onUploadNew}>Upload New</button>
+      <button onClick={onUploadNew}>Upload Another One</button>
     </>
   );
 };

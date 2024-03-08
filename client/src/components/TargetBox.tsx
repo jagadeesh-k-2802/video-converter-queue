@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { ChangeEvent, FC } from 'react';
 import type { DropTargetMonitor } from 'react-dnd';
 import { useDrop } from 'react-dnd';
 import { NativeTypes } from 'react-dnd-html5-backend';
@@ -33,11 +33,32 @@ const TargetBox: FC<TargetBoxProps> = props => {
     [props]
   );
 
+  const onFileSelect = (e: ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+
+    if (files !== null && files?.length > 0) {
+      if (files[0].type.includes('video')) {
+        if (onDrop) onDrop(files[0]);
+      } else {
+        alert('Upload only video files');
+      }
+    }
+  };
+
   const isActive = canDrop && isOver;
 
   return (
     <div className="drop-area" ref={drop}>
-      {isActive ? 'Release to drop' : 'Drag file here'}
+      <input
+        type="file"
+        name="file"
+        id="file"
+        accept="video/*"
+        title=""
+        onChange={onFileSelect}
+      />
+
+      {isActive ? 'Release to drop' : 'Drag file here or click to select file'}
     </div>
   );
 };

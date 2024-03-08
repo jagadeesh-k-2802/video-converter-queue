@@ -79,6 +79,15 @@ progress::-webkit-progress-value {
   border-radius: 40px;
 }
 
+input[type='file'] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .file {
   background-color: #dedede;
   padding: 0.5rem;
@@ -98,4 +107,5 @@ progress::-webkit-progress-value {
   align-items: center;
   margin: 1rem 0;
   border-radius: 0.5rem;
+  position: relative;
 }

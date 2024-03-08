@@ -5,15 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "tsx server.ts",
-    "server:dev": "nodemon --exec tsx server.ts",
-    "consumer:dev": "nodemon --exec tsx consumer.ts"
+    "dev:server": "nodemon --exec tsx server.ts",
+    "dev:consumer": "nodemon --exec tsx consumer.ts --ignore *.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.3",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "fluent-ffmpeg": "^2.1.2",
     "formidable": "^3.5.1",
